@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=VisorNumerico
+comment0.text=\r\n\ A\ classe\ VisorNumerico\ representa\ um\ visor\ num\u00E9rico\ digital\ que\ pode\r\n\ guardar\ values\ de\ zero\ at\u00E9\ um\ dado\ limite.\ O\ limite\ pode\ ser\ especificado\r\n\ ao\ criar\ o\ visor.\ Os\ valores\ variam\ de\ zero\ (inclusivo)\ at\u00E9\ limite-1.\r\n\ Se\ for\ usado,\ p.\ ex.,\ como\ um\ visor\ de\ segundos\ em\ um\ rel\u00F3gio\ digital,\ o\r\n\ limite\ seria\ 60,\ fazendo\ com\ que\ o\ visor\ mostrasse\ valores\ de\ 0\ a\ 59.\r\n\ Quando\ incrementado,\ o\ visor\ automaticamente\ volta\ para\ zero\ ao\ atingir\r\n\ o\ limite.\r\n\ \r\n\ @author\ Michael\ K\u00F6lling\ and\ David\ J.\ Barnes\r\n\ @version\ 2016.02.29\r\n\ Traduzido\ por\ Daniel\ Conrado\ (nome\ original\:\ NumberDisplay)\r\n
+comment1.params=limiteGiro
+comment1.target=VisorNumerico(int)
+comment1.text=\r\n\ Construtor\ de\ objetos\ da\ classe\ VisorNumerico.\r\n\ Configura\ o\ limite\ at\u00E9\ o\ qual\ o\ visor\ gira.\r\n
+comment2.params=
+comment2.target=int\ getValor()
+comment2.text=\r\n\ Retorna\ o\ valor\ atual.\r\n
+comment3.params=
+comment3.target=java.lang.String\ getValorExibi\u00E7\u00E3o()
+comment3.text=\r\n\ Retorna\ o\ valor\ de\ exibi\u00E7\u00E3o\ (ou\ seja,\ o\ valor\ atual\ como\ uma\ String\ de\ dois\r\n\ d\u00EDgitos.\ Se\ o\ valor\ \u00E9\ menor\ que\ dez,\ ele\ ser\u00E1\ preenchido\ com\ um\ zero\ \u00E0\r\n\ esquerda).\r\n
+comment4.params=valorSubstituto
+comment4.target=void\ setValor(int)
+comment4.text=\r\n\ Configura\ o\ valor\ do\ visor\ para\ o\ novo\ valor\ especificado.\ Se\ o\ novo\r\n\ valor\ \u00E9\ menor\ que\ zero\ ou\ acima\ do\ limite,\ ele\ n\u00E3o\ faz\ nada.\r\n
+comment5.params=
+comment5.target=void\ incrementar()
+comment5.text=\r\n\ Incrementa\ o\ valor\ do\ visor\ por\ um,\ girando\ para\ zero\ caso\ o\r\n\ limite\ \u00E9\ alcan\u00E7ado.\r\n
+numComments=6
