@@ -17,7 +17,9 @@ public class VisorRelogio
 {
     private VisorNumerico horas;
     private VisorNumerico minutos;
-    private String stringExibição;    // simula o visor real
+    private VisorNumerico segundos;
+    private String stringExibição;
+    // simula o visor real
     
     /**
      * Construtor de objetos VisorRelogio. Este construtor
@@ -27,6 +29,7 @@ public class VisorRelogio
     {
         horas = new VisorNumerico(24);
         minutos = new VisorNumerico(60);
+        segundos = new VisorNumerico(60);
         atualizarVisor();
     }
 
@@ -35,11 +38,12 @@ public class VisorRelogio
      * cria um novo relógio configurado no tempo especificado
      * pelos parâmetros.
      */
-    public VisorRelogio(int hora, int minuto)
+    public VisorRelogio(int hora, int minuto, int segundo)
     {
         horas = new VisorNumerico(24);
         minutos = new VisorNumerico(60);
-        setTime(hora, minuto);
+        segundos = new VisorNumerico(60);
+        setTime(hora, minuto, segundo);
     }
 
     /**
@@ -48,7 +52,10 @@ public class VisorRelogio
      */
     public void tique()
     {
-        minutos.incrementar();
+        segundos.incrementar();
+        if (segundos.getValor() == 0) {
+            minutos.incrementar();    
+        }
         if(minutos.getValor() == 0) {  // acabou de virar!
             horas.incrementar();
         }
@@ -58,10 +65,11 @@ public class VisorRelogio
     /**
      * COnfigura o tempo do visor para a hora e minuto especificados.
      */
-    public void setTime(int hora, int minuto)
+    public void setTime(int hora, int minuto, int segundo)
     {
         horas.setValor(hora);
         minutos.setValor(minuto);
+        segundos.setValor(segundo);
         atualizarVisor();
     }
 
@@ -79,6 +87,7 @@ public class VisorRelogio
     private void atualizarVisor()
     {
         stringExibição = horas.getValorExibição() + ":" + 
-                        minutos.getValorExibição();
+                        minutos.getValorExibição() + ":" + 
+                        segundos.getValorExibição();
     }
 }
